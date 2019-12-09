@@ -1,0 +1,46 @@
+{
+  "name": "websmsby",
+  "version": "0.2.0",
+  "description": "Node.js module for the websms.by service.",
+  "engines": {
+    "node": "13.3.0"
+  },
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha --require @babel/register spec/*.mjs",
+    "lint": "eslint index.mjs ./lib/*.mjs ./spec/*.test.mjs --color --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bonnzer/websmsby.git"
+  },
+  "keywords": [
+    "websms.by",
+    "Belarus",
+    "send",
+    "sms",
+    "textmessage"
+  ],
+  "author": "Alexander Samygin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bonnzer/websmsby/issues"
+  },
+  "homepage": "https://github.com/bonnzer/websmsby#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/register": "^7.7.4",
+    "babel-eslint": "^10.0.3",
+    "chai": "^4.2.0",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.2"
+  },
+  "dependencies": {
+    "validate": "^5.1.0"
+  }
+}
