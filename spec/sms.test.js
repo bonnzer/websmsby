@@ -1,5 +1,5 @@
-import chai from 'chai';
-import { SMS } from '../index.mjs';
+const chai = require('chai');
+const { SMS } = require('../index');
 
 const { expect } = chai;
 const sms = new SMS({ user: 'fake', apiKey: 'fake', testMode: true });

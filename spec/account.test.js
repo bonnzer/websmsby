@@ -1,5 +1,5 @@
-import chai from 'chai';
-import { Account } from '../index.mjs';
+const chai = require('chai');
+const { Account } = require('../index');
 
 const { expect } = chai;
 
