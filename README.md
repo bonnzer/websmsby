@@ -9,9 +9,6 @@ Currently supports only two main segments of functionality:
   - sending SMS functions
 
 # Installation
-
-Module requires [Node.js](https://nodejs.org/) v13.3+ to run (with full modules support, due the Node.js v14 release is already near), or v8.5+ with `--experimental-modules` flag.
-
 ```sh
 $ npm install websmsby
 ```

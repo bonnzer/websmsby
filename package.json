@@ -1,15 +1,14 @@
 {
   "name": "websmsby",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Node.js module for the websms.by service.",
   "engines": {
-    "node": "13.3.0"
+    "node": "12.13.1"
   },
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "test": "mocha --require @babel/register spec/*.mjs",
-    "lint": "eslint index.mjs ./lib/*.mjs ./spec/*.test.mjs --color --fix"
+    "test": "mocha --require @babel/register spec/*.js",
+    "lint": "eslint index.js ./lib/*.js ./spec/*.test.js --color --fix"
   },
   "repository": {
     "type": "git",
