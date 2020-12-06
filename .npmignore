@@ -1,0 +1,8 @@
+dist/__mocks__
+dist/__tests__
+src/
+coverage/
+docs/
+node_modules/
+.github/
+*.log

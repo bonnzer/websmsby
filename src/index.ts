@@ -5,9 +5,7 @@
  * - SMS: send textmessage
  */
 
-const Account = require('./lib/account.js');
-const SMS = require('./lib/sms.js');
+import { Account } from './classes/Account';
+import { SMS } from './classes/SMS';
 
-
-exports.SMS = SMS;
-exports.Account = Account;
+export { Account, SMS };
