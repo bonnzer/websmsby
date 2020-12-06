@@ -50,27 +50,27 @@ export class Request {
     }
   }
 
-  private handleData(d: string) {
-    this.response += d;
-  }
-
   public invoke(): Promise<Response> {
     return new Promise((resolve, reject) => {
       const req = http
         .request({ ...this.options }, (res) => {
-          res.on('data', this.handleData).on('end', () => {
-            try {
-              const encoded: Response | ErrorResponse = JSON.parse(
-                this.response,
-              );
+          res
+            .on('data', (d) => {
+              this.response += d;
+            })
+            .on('end', () => {
+              try {
+                const encoded: Response | ErrorResponse = JSON.parse(
+                  this.response,
+                );
 
-              return 'message' in encoded
-                ? reject(new WebsmsError(encoded.message, encoded.error))
-                : resolve(encoded);
-            } catch (e) {
-              return reject(e);
-            }
-          });
+                return 'message' in encoded
+                  ? reject(new WebsmsError(encoded.message, encoded.error))
+                  : resolve(encoded);
+              } catch (e) {
+                return reject(e);
+              }
+            });
         })
         .on('error', (error) => reject(error));
 
