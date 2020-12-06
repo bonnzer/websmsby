@@ -38,6 +38,7 @@ gateway.sendSMS({ recipients: ['375291111111'], message: 'hello, world!', sender
 - [getViberNames()](https://bonnzer.github.io/websmsby/classes/_classes_account_.account.html#getvibernames)
 - [activatePayCard()](https://bonnzer.github.io/websmsby/classes/_classes_account_.account.html#activatepaycard)
 #### SMS
+<<<<<<< HEAD
 - [sendSMS()](https://bonnzer.github.io/websmsby/classes/_classes_sms_.sms.html#sendsms)
 - [sendBulkSMS()](https://bonnzer.github.io/websmsby/classes/_classes_sms_.sms.html#sendbulksms)
 - [getCost()](https://bonnzer.github.io/websmsby/classes/_classes_sms_.sms.html#getcost)
@@ -47,3 +48,18 @@ gateway.sendSMS({ recipients: ['375291111111'], message: 'hello, world!', sender
 
 # Contributing
 This module is totally not ideal, so each PR will be reviewed with love and appreciate :)
+=======
+- `sendSMS({ recipients: string[], message: string, sender: string })`
+- `sendBulkSMS({ messages: [ { recipient: string, message: string, sender: string }, {...} ] })`
+- `getCost({ recipients: string[], message: string })`
+- `getBulkCost({ messages: [ { recipient: string, message: string, sender: string }, {...} ] })`
+- `getStatus({ messagesIds: int[] })`
+- `getList({ messagesIds: int[], bulkId: int, recipients: string[], sender: string, status: string, dateFrom:yyyy-mm-dd hh:ii:ss, dateTo: yyyy-mm-dd hh:ii:ss, limit: int, offset: int, sort: 'asc' || 'desc' })`
+
+#### devKey
+Every downloaded & used module gives me a cup of coffee through [websms.by](http://websms.by/) referral programm. If you don't want use my devKey for any reason (extra parameter on requests at least), just pass the `devKey` parameter as `false`.
+```
+const Account = new Account({ user: 'test', apiKey: 'test', devKey: false);
+```
+PS: PRs are welcome! =)
+>>>>>>> master
