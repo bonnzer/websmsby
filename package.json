@@ -3,12 +3,16 @@
   "version": "0.2.2",
   "description": "Node.js module for the websms.by service.",
   "engines": {
-    "node": "12.13.1"
+    "node": ">=14"
   },
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "mocha --require @babel/register spec/*.js",
-    "lint": "eslint index.js ./lib/*.js ./spec/*.test.js --color --fix"
+    "lint": "esw src/**/*.ts --color",
+    "test:coverage": "yarn test --coverage",
+    "test": "jest --verbose",
+    "build": "tsc",
+    "doc": "typedoc --out docs/ src/"
   },
   "repository": {
     "type": "git",
@@ -28,18 +32,33 @@
   },
   "homepage": "https://github.com/bonnzer/websmsby#readme",
   "devDependencies": {
-    "@babel/core": "^7.7.4",
-    "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
-    "@babel/register": "^7.7.4",
-    "babel-eslint": "^10.0.3",
-    "chai": "^4.2.0",
-    "eslint": "^6.7.2",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "mocha": "^6.2.2"
+    "@types/jest": "^26.0.16",
+    "@types/node": "^14.14.10",
+    "@typescript-eslint/eslint-plugin": "^4.9.0",
+    "@typescript-eslint/parser": "^4.9.0",
+    "codecov": "^3.8.1",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.4.4",
+    "typedoc": "^0.19.2",
+    "typescript": "4.0.x"
   },
   "dependencies": {
-    "validate": "^5.1.0"
+    "@types/dotenv": "^8.2.0"
+  },
+  "jest": {
+    "transform": {
+      ".(ts)": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ]
   }
 }
