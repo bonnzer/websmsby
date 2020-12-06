@@ -87,4 +87,3 @@ jobs:
         with:
           token: ${{ secrets.NPM_TOKEN }}
           tag: ${{ env.RELEASE_VERSION }}
-          dry-run: true
