@@ -1,6 +1,6 @@
 {
   "name": "websmsby",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Node.js module for the websms.by service.",
   "engines": {
     "node": ">=14"
@@ -47,9 +47,6 @@
     "ts-jest": "^26.4.4",
     "typedoc": "^0.19.2",
     "typescript": "4.0.x"
-  },
-  "dependencies": {
-    "@types/dotenv": "^8.2.0"
   },
   "jest": {
     "transform": {
