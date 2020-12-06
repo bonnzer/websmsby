@@ -1,6 +1,6 @@
 {
   "name": "websmsby",
-  "version": "0.3.1",
+  "version": "0.3.3",
   "description": "Node.js module for the websms.by service.",
   "engines": {
     "node": ">=14"
