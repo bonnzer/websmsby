@@ -83,13 +83,14 @@
 				</a>
 				<p>This module has a bunch of <code>*.d.ts</code> files so you can use this lib with pleasure and Typescript :)
 					Every request returns Promise, so it shouldn&#39;t be a problem to use methods in classic way or with async/await.
-				Just a simple example, cause all needed docs you can find below:</p>
+				Just a simple example with Account, cause all needed docs you can find below:</p>
 				<pre><code>import { Account } from &#x27;websmsby&#x27;;
 
 <span class="hljs-comment">// user and apiKey params are mandatory, testMode and devKey aren&#x27;t.</span>
 const account = <span class="hljs-keyword">new</span> <span class="hljs-constructor">Account({ <span class="hljs-params">user</span>: &#x27;<span class="hljs-params">yourmail</span>@<span class="hljs-params">here</span>.<span class="hljs-params">com</span>&#x27;, <span class="hljs-params">apiKey</span>: &#x27;<span class="hljs-params">somekey</span>&#x27; })</span>;
 
 account.get<span class="hljs-constructor">Balance()</span>.<span class="hljs-keyword">then</span><span class="hljs-literal">()</span>.catch((e)..</code></pre>
+				<p>...or with SMS</p>
 				<pre><code>import { SMS } from &#x27;websmsby&#x27;;
 
 const gateway = <span class="hljs-keyword">new</span> <span class="hljs-constructor">SMS({ <span class="hljs-params">user</span>: &#x27;<span class="hljs-params">yourmail</span>@<span class="hljs-params">here</span>.<span class="hljs-params">com</span>&#x27;, <span class="hljs-params">apiKey</span>: &#x27;<span class="hljs-params">somekey</span>&#x27;, <span class="hljs-params">testMode</span>: <span class="hljs-params">true</span> })</span>;
@@ -101,11 +102,12 @@ gateway.send<span class="hljs-constructor">SMS({ <span class="hljs-params">recip
 					<li><a href="https://bonnzer.github.io/websmsby/classes/_classes_account_.account.html#getbalance">getBalance()</a></li>
 					<li><a href="https://bonnzer.github.io/websmsby/classes/_classes_account_.account.html#getusernames">getUserNames()</a></li>
 					<li><a href="https://bonnzer.github.io/websmsby/classes/_classes_account_.account.html#getvibernames">getViberNames()</a></li>
-					<li><a href="https://bonnzer.github.io/websmsby/classes/_classes_account_.account.html#activatepaycard">activatePayCard()</a>
-						<a href="#sms" id="sms" style="color: inherit; text-decoration: none;">
-							<h4>SMS</h4>
-						</a>
-					&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</li>
+					<li><a href="https://bonnzer.github.io/websmsby/classes/_classes_account_.account.html#activatepaycard">activatePayCard()</a></li>
+				</ul>
+				<a href="#sms" id="sms" style="color: inherit; text-decoration: none;">
+					<h4>SMS</h4>
+				</a>
+				<ul>
 					<li><a href="https://bonnzer.github.io/websmsby/classes/_classes_sms_.sms.html#sendsms">sendSMS()</a></li>
 					<li><a href="https://bonnzer.github.io/websmsby/classes/_classes_sms_.sms.html#sendbulksms">sendBulkSMS()</a></li>
 					<li><a href="https://bonnzer.github.io/websmsby/classes/_classes_sms_.sms.html#getcost">getCost()</a></li>
@@ -116,38 +118,7 @@ gateway.send<span class="hljs-constructor">SMS({ <span class="hljs-params">recip
 				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
 					<h1>Contributing</h1>
 				</a>
-				<a href="#this-module-is-totally-not-ideal-so-each-pr-will-be-reviewed-with-love-and-appreciate-" id="this-module-is-totally-not-ideal-so-each-pr-will-be-reviewed-with-love-and-appreciate-" style="color: inherit; text-decoration: none;">
-					<h1>This module is totally not ideal, so each PR will be reviewed with love and appreciate :)</h1>
-				</a>
-				<ul>
-					<li><code>sendSMS({ recipients: string[], message: string, sender: string })</code></li>
-					<li><code>sendBulkSMS({ messages: [ { recipient: string, message: string, sender: string }, {...} ] })</code></li>
-					<li><code>getCost({ recipients: string[], message: string })</code></li>
-					<li><code>getBulkCost({ messages: [ { recipient: string, message: string, sender: string }, {...} ] })</code></li>
-					<li><code>getStatus({ messagesIds: int[] })</code></li>
-					<li><code>getList({ messagesIds: int[], bulkId: int, recipients: string[], sender: string, status: string, dateFrom:yyyy-mm-dd hh:ii:ss, dateTo: yyyy-mm-dd hh:ii:ss, limit: int, offset: int, sort: &#39;asc&#39; || &#39;desc&#39; })</code></li>
-				</ul>
-				<a href="#devkey" id="devkey" style="color: inherit; text-decoration: none;">
-					<h4>devKey</h4>
-				</a>
-				<p>Every downloaded &amp; used module gives me a cup of coffee through <a href="http://websms.by/">websms.by</a> referral programm. If you don&#39;t want use my devKey for any reason (extra parameter on requests at least), just pass the <code>devKey</code> parameter as <code>false</code>.</p>
-				<pre><code>const Account = <span class="hljs-keyword">new</span> <span class="hljs-constructor">Account({ <span class="hljs-params">user</span>: &#x27;<span class="hljs-params">test</span>&#x27;, <span class="hljs-params">apiKey</span>: &#x27;<span class="hljs-params">test</span>&#x27;, <span class="hljs-params">devKey</span>: <span class="hljs-params">false</span>)</span>;</code></pre>
-				<p>PS: PRs are welcome! =)</p>
-				<blockquote>
-					<blockquote>
-						<blockquote>
-							<blockquote>
-								<blockquote>
-									<blockquote>
-										<blockquote>
-											<p>master</p>
-										</blockquote>
-									</blockquote>
-								</blockquote>
-							</blockquote>
-						</blockquote>
-					</blockquote>
-				</blockquote>
+				<p>This module is totally not ideal, so each PR will be reviewed with love and appreciate :)</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
