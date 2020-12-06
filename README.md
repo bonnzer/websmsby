@@ -1,5 +1,5 @@
 # Description
-![CI](https://github.com/bonnzer/websmsby/workflows/CI/badge.svg?branch=master)[![codecov](https://codecov.io/gh/bonnzer/websmsby/branch/master/graph/badge.svg?token=23RFI5WEFU)](https://codecov.io/gh/bonnzer/websmsby)
+![CI](https://github.com/bonnzer/websmsby/workflows/CI/badge.svg?branch=develop) [![codecov](https://codecov.io/gh/bonnzer/websmsby/branch/master/graph/badge.svg?token=23RFI5WEFU)](https://codecov.io/gh/bonnzer/websmsby)
 
 
 The Node.js module for [websms.by](http://websms.by/) service.
